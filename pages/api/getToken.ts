@@ -44,8 +44,11 @@ export default async function handler(
         requestOptions
       )
 
+      console.log("tokenResponse", tokenResponse)
+
       // Extract token from the response
       const json = await tokenResponse.json()
+      console.log("json", json)
 
       res.status(200).json(json)
     } catch (error) {
